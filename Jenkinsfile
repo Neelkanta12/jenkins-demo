@@ -1,5 +1,11 @@
-stage('Deploy') {
-    steps {
-        sh 'exit 1'   // Force failure
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo "Build successful"
+            }
+        }
     }
 }
