@@ -1,11 +1,5 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                sh 'mvn clean package'   // This will FAIL (no maven installed)
-            }
-        }
+stage('Deploy') {
+    steps {
+        sh 'exit 1'   // Force failure
     }
 }
