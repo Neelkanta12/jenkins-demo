@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/Neelkanta12/jenkins-demo.git'
+                git 'https://github.com/Neelkanta12/devops-demo-repo.git'
             }
         }
 
@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8080:80 my-app'
+                sh 'docker run -d -p 8081:80 my-app'
             }
         }
     }
